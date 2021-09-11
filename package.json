@@ -1,0 +1,11 @@
+{
+  "name": "Console-App-Node.js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:Ludociel/Console-App-Node.js.git",
+  "author": "Breyner Sánchez <breinersanchez97@hotmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}
