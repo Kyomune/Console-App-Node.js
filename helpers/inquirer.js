@@ -37,6 +37,7 @@ const inquirerMenu = async () => {
 };
 
 const pause = async () => {
+  console.log('\n')
   const { key } = await inquirer.prompt(pressForContinue);
 
   return key;
