@@ -34,13 +34,10 @@ const pausa = () => {
       output: process.stdout,
     });
 
-    readline.question(
-      `\nPresione ${"ENTER".green} para continuar.\n`,
-      () => {
-        readline.close();
-        resolve();
-      }
-    );
+    readline.question(`\nPresione ${"ENTER".green} para continuar.\n`, () => {
+      readline.close();
+      resolve();
+    });
   });
 };
 

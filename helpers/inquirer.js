@@ -56,13 +56,13 @@ const readInput = async (message) => {
     },
   ];
 
-  const  { desc } = await inquirer.prompt(question);
+  const { desc } = await inquirer.prompt(question);
 
-  return desc
+  return desc;
 };
 
 module.exports = {
   inquirerMenu,
   pause,
-  readInput
+  readInput,
 };

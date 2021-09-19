@@ -15,12 +15,12 @@ const main = async () => {
 
     switch (opt) {
       case "1":
-        const desc = await readInput('Descripción:');
+        const desc = await readInput("Descripción:");
         taskes.createTask(desc);
         break;
-        case '2':
-          console.log(taskes.taskList);
-          break;
+      case "2":
+        console.log(taskes.taskList);
+        break;
     }
 
     await pause();
