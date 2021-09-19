@@ -1,4 +1,5 @@
 const Task = require("./task");
+require("colors");
 
 class Taskes {
   taskList = {};
@@ -26,6 +27,16 @@ class Taskes {
     const task = new Task(desc);
 
     this.taskList[task.id] = task;
+  }
+
+  taskListComplete() {
+    this.taskArrayList.forEach(({ desc, ending }, index) => {
+      const position = `${index + 1}`.green;
+      const status = ending ? "Completado".green : "Pendiente".red;
+
+      console.log();
+      console.log(`${position}. ${desc} :: ${status}`);
+    });
   }
 }
 
