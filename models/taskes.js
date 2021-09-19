@@ -47,16 +47,22 @@ class Taskes {
 
       if (isCompleted && ending) {
         position += 1;
-        const task = `${(position + '.').green} ${desc}:: ${status}`;
+        const task = `${(position + ".").green} ${desc}:: ${status}`;
         console.log(task);
       }
 
       if (!isCompleted && !ending) {
         position += 1;
-        const task = `${(position + '.').green} ${desc}:: ${status}`;
+        const task = `${(position + ".").green} ${desc}:: ${status}`;
         console.log(task);
       }
     });
+  }
+
+  deleteTask(id = "") {
+    if (this.taskList[id]) {
+      delete this.taskList[id];
+    }
   }
 }
 
