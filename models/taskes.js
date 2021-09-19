@@ -3,6 +3,15 @@ const Task = require("./task");
 class Taskes {
   taskList = {};
 
+  get taskArrayList() {
+    const taskArray = [];
+    Object.keys(this.taskList).forEach((key) => {
+      taskArray.push(this.taskList[key]);
+    });
+
+    return taskArray;
+  }
+
   constructor() {
     this.taskList = {};
   }
