@@ -6,7 +6,6 @@ const Taskes = require("./models/taskes");
 console.clear();
 
 const main = async () => {
-  console.log("Hola Mundo");
   let opt = "";
   const taskes = new Taskes();
 
