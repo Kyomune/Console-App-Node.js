@@ -27,6 +27,12 @@ const main = async () => {
       case "2":
         taskes.taskListComplete();
         break;
+      case "3":
+        taskes.taskListPendingOrComplete(true);
+        break;
+      case "4":
+        taskes.taskListPendingOrComplete(false);
+        break;
     }
 
     saveDB(taskes.taskArrayList);

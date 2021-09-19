@@ -35,7 +35,27 @@ class Taskes {
       const status = ending ? "Completado".green : "Pendiente".red;
 
       console.log();
-      console.log(`${position}. ${desc} :: ${status}`);
+      console.log(`${position}. ${desc}:: ${status}`);
+    });
+  }
+
+  taskListPendingOrComplete(isCompleted = true) {
+    let position = 0;
+    console.log();
+    this.taskArrayList.forEach(({ desc, ending }) => {
+      const status = ending ? `${ending.toString().green}` : "Pendiente".red;
+
+      if (isCompleted && ending) {
+        position += 1;
+        const task = `${(position + '.').green} ${desc}:: ${status}`;
+        console.log(task);
+      }
+
+      if (!isCompleted && !ending) {
+        position += 1;
+        const task = `${(position + '.').green} ${desc}:: ${status}`;
+        console.log(task);
+      }
     });
   }
 }
