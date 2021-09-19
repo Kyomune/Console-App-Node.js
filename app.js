@@ -12,11 +12,9 @@ const main = async () => {
 
   const tareasDB = readDB();
 
-  if(tareasDB) {
-
+  if (tareasDB) {
+    taskes.loadTaskesFromArray(tareasDB);
   }
-
-  await pause();
 
   do {
     opt = await inquirerMenu();
@@ -27,11 +25,11 @@ const main = async () => {
         taskes.createTask(desc);
         break;
       case "2":
-        // readDB();
+        console.log(taskes.taskList);
         break;
     }
 
-    // saveDB(taskes.taskArrayList);
+    saveDB(taskes.taskArrayList);
 
     await pause();
   } while (opt !== "0");
