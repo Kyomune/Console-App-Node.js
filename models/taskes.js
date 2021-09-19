@@ -1,11 +1,9 @@
-
-
 class Taskes {
-    taskList = {};
+  taskList = {};
 
-    constructor () {
-        this.taskList = {};
-    }
+  constructor() {
+    this.taskList = {};
+  }
 }
 
-modules.exports = Taskes;
+module.exports = Taskes;

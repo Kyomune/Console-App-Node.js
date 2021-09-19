@@ -1,26 +1,23 @@
 require("colors");
 
 const { inquirerMenu, pause } = require("./helpers/inquirer");
-const Task = require("./models/task");
+const Taskes = require("./models/taskes");
 
 console.clear();
 
 const main = async () => {
   let opt = "";
-  let key = "";
   console.log("Hola Mundo");
 
   // pausa();
 
   do {
-    // opt = await inquirerMenu();
-    // console.log(opt);
+    opt = await inquirerMenu();
+    const taskes = new Taskes()
+    console.log(opt);
 
-    const task = new Task('Comprar comida');
-    console.log(task)
 
-    key = await pause();
-    
+    await pause();
   } while (opt !== "0");
 };
 

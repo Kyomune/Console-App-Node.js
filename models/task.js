@@ -1,16 +1,14 @@
-const { v4: uuidv4 } = require('uuid')
+const { v4: uuidv4 } = require("uuid");
 
 class Task {
-    id = '';
-    desc = '';
-    ending = null;
+  id = "";
+  desc = "";
+  ending = null;
 
-    constructor ( desc ) {
-
-        this.id = uuidv4();
-        this.desc = desc;
-    }
-
+  constructor(desc) {
+    this.id = uuidv4();
+    this.desc = desc;
+  }
 }
 
 module.exports = Task;

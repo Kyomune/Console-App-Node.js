@@ -21,7 +21,7 @@ const questions = [
 const pressForContinue = {
   type: "input",
   name: "key",
-  message:`Presione ${'enter'.green} para continuar`, 
+  message: `Presione ${"enter".green} para continuar`,
 };
 
 const inquirerMenu = async () => {
@@ -37,10 +37,8 @@ const inquirerMenu = async () => {
 };
 
 const pause = async () => {
-  console.log('\n')
-  const { key } = await inquirer.prompt(pressForContinue);
-
-  return key;
+  console.log("\n");
+  await inquirer.prompt(pressForContinue);
 };
 
 module.exports = {
