@@ -64,6 +64,21 @@ class Taskes {
       delete this.taskList[id];
     }
   }
+
+  toggleCompleteds(ids = []) {
+    ids.forEach((id) => {
+      const task = this.taskList[id];
+      if (!task.ending) {
+        task.ending = new Date().toISOString();
+      }
+    });
+
+    this.taskArrayList.forEach((task) => {
+      if (!ids.includes(task.id)) {
+        this.taskList[task.id].ending = null;
+      }
+    });
+  }
 }
 
 module.exports = Taskes;

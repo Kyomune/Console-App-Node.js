@@ -100,12 +100,13 @@ const showCheckList = async (taskes = []) => {
     return {
       value: id,
       name: `${idx} ${desc}`,
-      checked: ( ending ?? false) 
+      checked: ending ?? false,
     };
   });
 
-
-  const question = [{ type: "checkbox", name: "ids", message: "Seleccione", choices }];
+  const question = [
+    { type: "checkbox", name: "ids", message: "Seleccione", choices },
+  ];
 
   const { ids } = await inquirer.prompt(question);
   return ids;
@@ -117,5 +118,5 @@ module.exports = {
   readInput,
   taskListDelete,
   confirm,
-  showCheckList
+  showCheckList,
 };
